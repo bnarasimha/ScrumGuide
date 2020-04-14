@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'uses-of-scrum',
-  templateUrl: 'uses-of-scrum.html'
+  selector: 'scrum-uses',
+  templateUrl: 'scrum-uses.html'
 })
-export class UsesOfScrum {
+export class ScrumUses {
   constructor(private navCtrl : NavController) {
 
   }
