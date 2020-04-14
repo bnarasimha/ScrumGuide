@@ -1,0 +1,7 @@
+{
+  "name": "ScrumGuide",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar>
+    <!-- <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
+    <ion-title>Scrum Guide</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h2>Welcome to Scrum Guide!</h2>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col>
+        <b>Scrum Guide</b>
+        <div>
+          <button ion-button small *ngFor="let p of pages" (click)="goToPage(p.component);">{{p.title}}</button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div></div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size-lg="3" size-md="4" size-sm="6" size="12">
+        <b>3 Roles</b>
+        <div>
+          <button ion-button small>Product Owner</button>
+          <button ion-button small>Scrum Master</button>
+          <button ion-button small>Development Team</button>
+        </div>
+      </ion-col>
+      <ion-col size-lg="3" size-md="4" size-sm="6" size="12">
+        <b>3 Artifacts</b>
+        <div>
+          <button ion-button small>Product Backlog</button>
+          <button ion-button small>Sprint Backlog</button>
+          <button ion-button small>Increment</button>
+        </div>
+      </ion-col>
+    </ion-row>
+   
+    <ion-row>
+      <ion-col>
+        <b>5 Events</b>
+        <div>
+          <button ion-button small>Sprint Planning</button>
+          <button ion-button small>Daily Scrum</button>
+          <button ion-button small>Sprint Review</button>
+          <button ion-button small>Sprint Retrospective</button>
+          <button ion-button small>Sprint</button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  <!-- 
+  <h3>
+    <p>
+      Scrum is a framework for developing, delivering, and sustaining complex products. This Guide contains the definition of Scrum. This definition consists of Scrum’s roles, events, artifacts, and the rules that bind them together. Ken Schwaber and Jeff Sutherland developed Scrum; the Scrum Guide is written and provided by them. Together, they stand behind the Scrum Guide.
+    </p>
+  </h3>
+  <p>
+  </p> -->
+
+</ion-content>
