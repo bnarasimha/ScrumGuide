@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Scrum Guide</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h2>The Scrum Team</h2>
+     
+  <div>
+  
+    <ion-grid>
+
+      <ion-row>
+        <ion-col>
+          <div>
+            The Scrum Team consists of a Product Owner, the Development Team, and a Scrum Master. Scrum Teams are self-organizing and cross-functional. Self-organizing teams choose how best to accomplish their work, rather than being directed by others outside the team. Cross-functional teams have all competencies needed to accomplish the work without depending on others not part of the team. The team model in Scrum is designed to optimize flexibility, creativity, and productivity. The Scrum Team has proven itself to be increasingly effective for all the earlier stated uses, and any complex work.
+            <br /><br />
+            Scrum Teams deliver products iteratively and incrementally, maximizing opportunities for feedback. Incremental deliveries of "Done" product ensure a potentially useful version of working product is always available.
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+       <ion-col size-lg="3" size-md="4" size-sm="6" size="12">
+        <div>
+          <button class="button" ion-button small *ngFor="let role of roles" (click)="goToPage(role.component);">{{role.title}}</button>
+        </div>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col>
+        <div>
+          <button ion-button color="primary" (click)="back(ScrumGuideHome);">Back</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Scrum Guide</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h2>Scrum Artifacts</h2>
+     
+  <div>
+  
+    <ion-grid>
+
+      <ion-row>
+        <ion-col>
+          <div>
+            Scrum’s artifacts represent work or value to provide transparency and opportunities for inspection and adaptation. Artifacts defined by Scrum are specifically designed to maximize transparency of key information so that everybody has the same understanding of the artifact.          
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-lg="3" size-md="4" size-sm="6" size="12">
+          <div>
+            <button ion-button small *ngFor="let artifact of artifacts" (click)="goToPage(artifact.component);">{{artifact.title}}</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    
+    <ion-row>
+      <ion-col>
+        <div>
+          <button ion-button color="primary" (click)="back(ScrumGuideHome);">Back</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  </div>
+
+</ion-content>

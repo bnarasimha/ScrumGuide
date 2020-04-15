@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
-import { ScrumGuideHome } from '../pages/scrum-guide-home/scrum-guide-home';
+import { ScrumGuideHome } from '../pages/scrum/scrum-guide-home/scrum-guide-home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';

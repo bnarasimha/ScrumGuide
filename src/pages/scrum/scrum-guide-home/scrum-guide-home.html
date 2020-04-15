@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Scrum Guide</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h2>Welcome to Scrum Guide!</h2>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col>
+        <b>Scrum Guide</b>
+        <div>
+          <button ion-button small *ngFor="let p of pages" (click)="goToPage(p.component);">{{p.title}}</button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div></div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size-lg="3" size-md="4" size-sm="6" size="12">
+        <b><a class="underline" (click)="goToScrumTeam()">3 Roles of Scrum</a></b>
+        <div>
+          <button ion-button small *ngFor="let role of roles" (click)="goToPage(role.component);">{{role.title}}</button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div></div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size-lg="3" size-md="4" size-sm="6" size="12">
+        <b><a class="underline" (click)="goToArtifacts()">3 Artifacts of Scrum</a></b>
+        <div>
+          <button ion-button small *ngFor="let artifact of artifacts" (click)="goToPage(artifact.component);">{{artifact.title}}</button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div></div>
+      </ion-col>
+    </ion-row>
+   
+    <ion-row>
+      <ion-col>
+        <b><a class="underline" (click)="goToEvents()">5 Events of Scrum</a></b>
+        <div>
+          <button ion-button small *ngFor="let event of events" (click)="goToPage(event.component);">{{event.title}}</button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <b>Artifact Transparency</b>
+        <div>
+          <button ion-button small *ngFor="let dod of artifactTransparency" (click)="goToPage(dod.component);">{{dod.title}}</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
