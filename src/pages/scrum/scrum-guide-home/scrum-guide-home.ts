@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { ScrumDefinition } from '../scrum-definition/scrum-definition';
@@ -26,17 +26,25 @@ import { Events } from '../../events/events/events';
 
 import { DefinitionOfDone } from '../../definition-of-done/definition-of-done';
 
+import { Slides } from 'ionic-angular';
+
 @Component({
   selector: 'page-hello-ionic',
   templateUrl: 'scrum-guide-home.html'
 })
 export class ScrumGuideHome {
+  @ViewChild('slides', { read: Slides }) slides: Slides;
 
   pages: Array<{title: string, component : any}>
   roles: Array<{title: string, component : any}>
   artifacts: Array<{title: string, component : any}>
   events: Array<{title: string, component : any}>
   artifactTransparency: Array<{title:string, component:any}>
+
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400
+  };
 
   constructor(private navCtrl : NavController) {
     this.pages = [

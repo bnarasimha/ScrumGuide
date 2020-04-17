@@ -29,11 +29,9 @@ import { Events } from '../pages/events/events/events';
 
 import { DefinitionOfDone } from '../pages/definition-of-done/definition-of-done';
 
-import { ItemDetailsPage } from '../pages/item-details/item-details';
-import { ListPage } from '../pages/list/list';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 @NgModule({
   declarations: [
@@ -58,9 +56,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SprintRetrospective,
     Events,
     DefinitionOfDone,
-    ScrumTeam,
-    ItemDetailsPage,
-    ListPage
+    ScrumTeam
   ],
   imports: [
     BrowserModule,
@@ -89,9 +85,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SprintRetrospective,
     Events,
     DefinitionOfDone,
-    ScrumTeam,
-    ItemDetailsPage,
-    ListPage
+    ScrumTeam
   ],
   providers: [
     StatusBar,

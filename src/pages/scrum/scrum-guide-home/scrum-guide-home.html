@@ -1,77 +1,86 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Scrum Guide</ion-title>
+    <ion-title>
+      <div>
+        Scrum Guide
+      </div>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <h2>Welcome to Scrum Guide!</h2>
+  <ion-slides>
+    <ion-slide *ngFor="let p of pages">
+      <span>
+        <button class="background radius cover button text-shadow text-bold text-white shadow" 
+        (click)="goToPage(p.component);">{{p.title}}</button>
+      </span>
+    </ion-slide>
+  </ion-slides>
 
-  <ion-grid>
+  <div class="space"></div>
+  <div class="row">
+    <div class="col text-bold" style="margin-left: 5px;">
+      Scrum Team
+    </div>
+  </div>
 
-    <ion-row>
-      <ion-col>
-        <b>Scrum Guide</b>
-        <div>
-          <button ion-button small *ngFor="let p of pages" (click)="goToPage(p.component);">{{p.title}}</button>
-        </div>
-      </ion-col>
-    </ion-row>
+  <ion-slides>
+    <ion-slide *ngFor="let role of roles">
+      <span>
+        <button class="background radius cover button text-shadow text-bold text-white shadow" 
+        (click)="goToPage(role.component);">{{role.title}}</button>
+      </span>
+    </ion-slide>
+  </ion-slides>
 
-    <ion-row>
-      <ion-col>
-        <div></div>
-      </ion-col>
-    </ion-row>
+  <div class="space"></div>
+  <div class="row ">
+    <div class="col text-bold" style="margin-left: 5px;">
+      Scrum Artifacts
+    </div>
+  </div>
 
-    <ion-row>
-      <ion-col size-lg="3" size-md="4" size-sm="6" size="12">
-        <b><a class="underline" (click)="goToScrumTeam()">3 Roles of Scrum</a></b>
-        <div>
-          <button ion-button small *ngFor="let role of roles" (click)="goToPage(role.component);">{{role.title}}</button>
-        </div>
-      </ion-col>
-    </ion-row>
+  <ion-slides>
+    <ion-slide *ngFor="let artifact of artifacts">
+      <span>
+        <button class="background radius cover button text-shadow text-bold text-white shadow" 
+        (click)="goToPage(artifact.component);">{{artifact.title}}</button>
+      </span>
+    </ion-slide>
+  </ion-slides>
 
-    <ion-row>
-      <ion-col>
-        <div></div>
-      </ion-col>
-    </ion-row>
+  <div class="space"></div>
+  <div class="row ">
+    <div class="col text-bold" style="margin-left: 5px;">
+      Scrum Events
+    </div>
+  </div>
 
-    <ion-row>
-      <ion-col size-lg="3" size-md="4" size-sm="6" size="12">
-        <b><a class="underline" (click)="goToArtifacts()">3 Artifacts of Scrum</a></b>
-        <div>
-          <button ion-button small *ngFor="let artifact of artifacts" (click)="goToPage(artifact.component);">{{artifact.title}}</button>
-        </div>
-      </ion-col>
-    </ion-row>
+  <ion-slides>
+    <ion-slide *ngFor="let event of events">
+      <span>
+        <button class="background radius cover button text-shadow text-bold text-white shadow" 
+        (click)="goToPage(event.component);">{{event.title}}</button>
+      </span>
+    </ion-slide>
+  </ion-slides>
 
-    <ion-row>
-      <ion-col>
-        <div></div>
-      </ion-col>
-    </ion-row>
-   
-    <ion-row>
-      <ion-col>
-        <b><a class="underline" (click)="goToEvents()">5 Events of Scrum</a></b>
-        <div>
-          <button ion-button small *ngFor="let event of events" (click)="goToPage(event.component);">{{event.title}}</button>
-        </div>
-      </ion-col>
-    </ion-row>
+  <div class="space"></div>
+  <div class="row ">
+    <div class="col text-bold" style="margin-left: 5px;">
+      Artifacts Transparency
+    </div>
+  </div>
 
-    <ion-row>
-      <ion-col>
-        <b>Artifact Transparency</b>
-        <div>
-          <button ion-button small *ngFor="let dod of artifactTransparency" (click)="goToPage(dod.component);">{{dod.title}}</button>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-slides>
+    <ion-slide *ngFor="let dod of artifactTransparency">
+      <span>
+        <button class="background radius cover button text-shadow text-bold text-white shadow" 
+        (click)="goToPage(dod.component);">{{dod.title}}</button>
+      </span>
+    </ion-slide>
+  </ion-slides>
 
 </ion-content>

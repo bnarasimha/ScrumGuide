@@ -3,7 +3,8 @@
     <name>Scrum Guide</name>
     <description>Learn Scrum via Scrum Guide</description>
     <author email="bnarasimha21@gmail.com" href="http://ionicframework.com/">INarasimha Badrinath</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://localhost:8101" />
+    <preference name="DisallowOverscroll" value="true" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -99,4 +100,5 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^4.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+    <allow-navigation href="http://localhost:8101" sessionid="772b0b76" />
 </widget>

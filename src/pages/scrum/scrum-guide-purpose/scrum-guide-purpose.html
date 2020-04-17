@@ -1,19 +1,24 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Scrum Guide</ion-title>
-  </ion-navbar>
+  <div class="header blue">
+    <button class="left icon" name="button"></button>
+    <h1>Scrum Guide</h1>
+  </div>
 </ion-header>
+ 
 
-<ion-content padding>
 
-  <h2>Purpose of Scrum Guide</h2>
+<ion-content padding class="grey-100">
+
+  <h2 class="text-grey-800 text-bold text-strong">Purpose of Scrum Guide</h2>
      
-  <div>
+  <div class="padding blue-grey-900 text-white shadow radius mark">
     Scrum is a framework for developing, delivering, and sustaining complex products. This Guide contains the definition of Scrum. This definition consists of Scrum’s roles, events, artifacts, and the rules that bind them together. Ken Schwaber and Jeff Sutherland developed Scrum; the Scrum Guide is written and provided by them. Together, they stand behind the Scrum Guide.
   </div>
 
+  <div class="space"></div>
+  
   <div>
-    <button ion-button color="primary" (click)="back(ScrumGuideHome);">Back</button>
+    <button class="background text-white text-strong small radius shadow" (click)="back(ScrumGuideHome);">Back</button>
   </div>
 
 </ion-content>
