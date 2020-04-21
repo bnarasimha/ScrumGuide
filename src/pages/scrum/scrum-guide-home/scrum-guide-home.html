@@ -10,74 +10,94 @@
 
 <ion-content padding>
 
+  <div class="row">
+    <div class="col">
+        <div class="header-background shadow radius text-white text-bold">
+          Scrum
+        </div>
+    </div>
+  </div>
+
   <ion-slides>
     <ion-slide *ngFor="let p of pages">
       <span>
-        <button class="background radius cover button text-shadow text-bold text-white shadow" 
+        <button class="tile-background radius cover button text-shadow text-bold text-black shadow" 
         (click)="goToPage(p.component);">{{p.title}}</button>
       </span>
     </ion-slide>
   </ion-slides>
 
   <div class="space"></div>
+
   <div class="row">
-    <div class="col text-bold" style="margin-left: 5px;">
-      Scrum Team
+    <div class="col">
+        <div class="header-background shadow radius text-white text-bold" (click)="goToScrumTeam();">
+          Scrum Team >
+        </div>
     </div>
   </div>
 
   <ion-slides>
     <ion-slide *ngFor="let role of roles">
       <span>
-        <button class="background radius cover button text-shadow text-bold text-white shadow" 
+        <button class="tile-background radius cover button text-shadow text-bold text-black shadow" 
         (click)="goToPage(role.component);">{{role.title}}</button>
       </span>
     </ion-slide>
   </ion-slides>
 
   <div class="space"></div>
-  <div class="row ">
-    <div class="col text-bold" style="margin-left: 5px;">
-      Scrum Artifacts
+
+  <div class="row">
+    <div class="col">
+        <div class="header-background shadow radius text-white text-bold" (click)="goToArtifacts();">
+          Scrum Artifacts >
+        </div>
     </div>
   </div>
 
   <ion-slides>
     <ion-slide *ngFor="let artifact of artifacts">
       <span>
-        <button class="background radius cover button text-shadow text-bold text-white shadow" 
+        <button class="tile-background radius cover button text-shadow text-bold text-black shadow" 
         (click)="goToPage(artifact.component);">{{artifact.title}}</button>
       </span>
     </ion-slide>
   </ion-slides>
 
   <div class="space"></div>
-  <div class="row ">
-    <div class="col text-bold" style="margin-left: 5px;">
-      Scrum Events
+
+  <div class="row">
+    <div class="col">
+        <div class="header-background shadow radius text-white text-bold" (click)="goToEvents();">
+          Scrum Events >
+        </div>
     </div>
   </div>
 
   <ion-slides>
     <ion-slide *ngFor="let event of events">
       <span>
-        <button class="background radius cover button text-shadow text-bold text-white shadow" 
+        <button class="tile-background radius cover button text-shadow text-bold text-black shadow" 
         (click)="goToPage(event.component);">{{event.title}}</button>
       </span>
     </ion-slide>
   </ion-slides>
 
   <div class="space"></div>
-  <div class="row ">
-    <div class="col text-bold" style="margin-left: 5px;">
-      Artifacts Transparency
+
+  <div class="row">
+    <div class="col">
+        <div class="header-background shadow radius text-white text-bold">
+          Artifacts Transparency
+        </div>
     </div>
   </div>
 
   <ion-slides>
     <ion-slide *ngFor="let dod of artifactTransparency">
       <span>
-        <button class="background radius cover button text-shadow text-bold text-white shadow" 
+        <button class="tile-background radius cover button text-shadow text-bold text-black shadow" 
         (click)="goToPage(dod.component);">{{dod.title}}</button>
       </span>
     </ion-slide>
