@@ -1,7 +1,5 @@
 <ion-header>
-  <ion-navbar>
     <ion-title>Scrum Guide</ion-title>
-  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
@@ -14,8 +12,19 @@
       Other than the Sprint itself, which is a container for all other events, each event in Scrum is a formal opportunity to inspect and adapt something. These events are specifically designed to enable critical transparency and inspection. Failure to include any of these events results in reduced transparency and is a lost opportunity to inspect and adapt.
     </div>
   
-    <div>
-      <button class="button small radius shadow detail-button-navigation" ion-button small *ngFor="let event of events" (click)="goToPage(event.component);">{{event.title}}</button>    
+
+    <div class="space"></div>
+
+    <div class="detail-topic-container radius shadow mark">
+
+      <div class="row" *ngFor="let event of events">
+        <div class="col">
+            <div class="scrum-topic shadow radius" (click)="goToPage(event.component);">
+              {{event.title}}
+            </div>
+        </div>
+      </div>   
+
     </div>
 
     <div class="space"></div>

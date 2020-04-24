@@ -1,7 +1,5 @@
 <ion-header>
-  <ion-navbar>
     <ion-title>Scrum Guide</ion-title>
-  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
@@ -12,8 +10,18 @@
       Scrum’s artifacts represent work or value to provide transparency and opportunities for inspection and adaptation. Artifacts defined by Scrum are specifically designed to maximize transparency of key information so that everybody has the same understanding of the artifact.          
     </div>
   
-    <div>
-      <button class="button small radius shadow detail-button-navigation" ion-button small *ngFor="let artifact of artifacts" (click)="goToPage(artifact.component);">{{artifact.title}} ></button>
+    <div class="space"></div>
+
+    <div class="detail-topic-container radius shadow mark">
+
+      <div class="row" *ngFor="let artifact of artifacts" >
+        <div class="col">
+            <div class="scrum-topic shadow radius" (click)="goToPage(artifact.component);">
+              {{artifact.title}}
+            </div>
+        </div>
+      </div>   
+
     </div>
 
     <div class="space"></div>

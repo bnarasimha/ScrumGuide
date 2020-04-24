@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
-import { ScrumGuideHome } from '../pages/scrum/scrum-guide-home/scrum-guide-home';
+import { Home } from '../pages/home/home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -12,7 +12,7 @@ export class ScrumGuide {
   @ViewChild(Nav) nav: Nav;
 
   // make ScrumGuideHome the root (or first) page
-  rootPage = ScrumGuideHome;
+  rootPage = Home;
   pages: Array<{title: string, component: any}>;
 
   constructor(

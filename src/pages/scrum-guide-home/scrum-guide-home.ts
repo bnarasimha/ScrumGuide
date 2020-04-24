@@ -1,32 +1,34 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { ScrumDefinition } from '../scrum-definition/scrum-definition';
-import { ScrumTheory } from '../scrum-theory/scrum-theory';
-import { ScrumUses } from '../scrum-uses/scrum-uses';
-import { ScrumGuidePurpose } from '../scrum-guide-purpose/scrum-guide-purpose';
-import { ScrumValues } from '../scrum-values/scrum-values';
+import { Scrum } from '../scrum/scrum/scrum';
+import { ScrumDefinition } from '../scrum/scrum-definition/scrum-definition';
+import { ScrumTheory } from '../scrum/scrum-theory/scrum-theory';
+import { ScrumUses } from '../scrum/scrum-uses/scrum-uses';
+import { ScrumGuidePurpose } from '../scrum/scrum-guide-purpose/scrum-guide-purpose';
+import { ScrumValues } from '../scrum/scrum-values/scrum-values';
 
-import { ProductOwner } from '../../roles/product-owner/product-owner';
-import { DevelopmentTeam } from '../../roles/development-team/development-team';
-import { ScrumMaster } from '../../roles/scrum-master/scrum-master';
-import { ScrumTeam } from '../../roles/scrum-team/scrum-team';
+import { ProductOwner } from '../roles/product-owner/product-owner';
+import { DevelopmentTeam } from '../roles/development-team/development-team';
+import { ScrumMaster } from '../roles/scrum-master/scrum-master';
+import { ScrumTeam } from '../roles/scrum-team/scrum-team';
 
-import { ProductBacklog } from '../../artifacts/product-backlog/product-backlog';
-import { SprintBacklog } from '../../artifacts/sprint-backlog/sprint-backlog';
-import { Increment } from '../../artifacts/increment/increment';
-import { Artifacts } from '../../artifacts/artifacts/artifacts';
+import { ProductBacklog } from '../artifacts/product-backlog/product-backlog';
+import { SprintBacklog } from '../artifacts/sprint-backlog/sprint-backlog';
+import { Increment } from '../artifacts/increment/increment';
+import { Artifacts } from '../artifacts/artifacts/artifacts';
 
-import { SprintPlanning } from '../../events/sprint-planning/sprint-planning';
-import { SprintReview } from '../../events/sprint-review/sprint-review';
-import { SprintRetrospective } from '../../events/sprint-retrospective/sprint-retrospective';
-import { DailyScrum } from '../../events/daily-scrum/daily-scrum';
-import { Sprint } from '../../events/sprint/sprint';
-import { Events } from '../../events/events/events';
+import { SprintPlanning } from '../events/sprint-planning/sprint-planning';
+import { SprintReview } from '../events/sprint-review/sprint-review';
+import { SprintRetrospective } from '../events/sprint-retrospective/sprint-retrospective';
+import { DailyScrum } from '../events/daily-scrum/daily-scrum';
+import { Sprint } from '../events/sprint/sprint';
+import { Events } from '../events/events/events';
 
-import { DefinitionOfDone } from '../../definition-of-done/definition-of-done';
+import { DefinitionOfDone } from '../definition-of-done/definition-of-done';
 
 import { Slides } from 'ionic-angular';
+import { EndNote } from '../end-note/end-note';
 
 @Component({
   selector: 'page-hello-ionic',
@@ -84,12 +86,24 @@ export class ScrumGuideHome {
     this.navCtrl.push(component);
   }
 
+  goToScrum(){
+    this.navCtrl.push(Scrum);
+  }
+
   goToScrumTeam(){
     this.navCtrl.push(ScrumTeam);
   }
 
   goToArtifacts(){
     this.navCtrl.push(Artifacts);
+  }
+
+  goToDoD(){
+    this.navCtrl.push(DefinitionOfDone);
+  }
+
+  goToEndNote(){
+    this.navCtrl.push(EndNote);
   }
 
   goToEvents(){

@@ -1,7 +1,5 @@
 <ion-header>
-  <ion-navbar>
     <ion-title>Scrum Guide</ion-title>
-  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
@@ -14,8 +12,18 @@
       Scrum Teams deliver products iteratively and incrementally, maximizing opportunities for feedback. Incremental deliveries of "Done" product ensure a potentially useful version of working product is always available.
     </div>
   
-    <div>
-      <button class="button small radius shadow detail-button-navigation" ion-button small *ngFor="let role of roles" (click)="goToPage(role.component);">{{role.title}} ></button>
+    <div class="space"></div>
+
+    <div class="detail-topic-container radius shadow mark">
+
+      <div class="row" *ngFor="let role of roles" >
+        <div class="col">
+            <div class="scrum-topic shadow radius" (click)="goToPage(role.component);">
+              {{role.title}}
+            </div>
+        </div>
+      </div>   
+
     </div>
 
     <div class="space"></div>

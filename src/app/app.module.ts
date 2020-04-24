@@ -3,7 +3,10 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { ScrumGuide } from './app.component';
 
-import { ScrumGuideHome } from '../pages/scrum/scrum-guide-home/scrum-guide-home';
+import { Home } from '../pages/home/home';
+
+import { Scrum } from '../pages/scrum/scrum/scrum';
+import { ScrumGuideHome } from '../pages/scrum-guide-home/scrum-guide-home';
 import { ScrumDefinition } from '../pages/scrum/scrum-definition/scrum-definition';
 import { ScrumUses } from '../pages/scrum/scrum-uses/scrum-uses';
 import { ScrumTheory } from '../pages/scrum/scrum-theory/scrum-theory';
@@ -28,6 +31,7 @@ import { SprintReview } from '../pages/events/sprint-review/sprint-review';
 import { Events } from '../pages/events/events/events';
 
 import { DefinitionOfDone } from '../pages/definition-of-done/definition-of-done';
+import { EndNote } from '../pages/end-note/end-note';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -36,6 +40,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     ScrumGuide,
+    Home,
+    Scrum,
     ScrumGuideHome,
     ScrumDefinition,
     ScrumUses,
@@ -56,7 +62,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SprintRetrospective,
     Events,
     DefinitionOfDone,
-    ScrumTeam
+    ScrumTeam,
+    EndNote
   ],
   imports: [
     BrowserModule,
@@ -64,6 +71,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    Home,
+    Scrum,
     ScrumGuide,
     ScrumGuideHome,
     ScrumDefinition,
@@ -85,7 +94,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SprintRetrospective,
     Events,
     DefinitionOfDone,
-    ScrumTeam
+    ScrumTeam,
+    EndNote
   ],
   providers: [
     StatusBar,
