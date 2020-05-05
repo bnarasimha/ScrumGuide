@@ -1,26 +1,32 @@
 <ion-header>
-  <ion-navbar>
     <ion-title>
-      <div>
         Scrum Guide
-      </div>
     </ion-title>
-  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <img src="../../assets/imgs/scrumguide.png" (click)="goToScrumGuideHome();"/>
 
-  <div class="space"></div>
+  <div class="row-center" style="height: 90%">
 
-  <div class="text-strong">
-    Click above to read Scrum Guide 
+    <div class="col-20" style="text-align: center; padding-top: 100px;">
+      <img class="radius shadow" style="border: solid 2px grey;" 
+      width="250px" height="250px" src="../../assets/imgs/scrumguide.png" 
+      (click)="goToScrumGuideHome();"/>
+
+      <div style="padding-top: 300px;">
+        Click to Read
+      </div>
+    </div>
   </div>
 
   <div class="space"></div>
+  <div class="space"></div>
+  
+  <div class="row-center" style="height: 10%">
+    <div style="text-align: center;">
+      This Scrum Guide is a direct port of the November 2017 version available 
+      <a class="text-bold" href="https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100">as a PDF here.</a>
+    </div>
 
-  <div>
-    This Scrum Guide is a direct port of the November 2017 version available 
-    <a class="text-bold" href="https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100">as a PDF here.</a>
   </div>
 </ion-content>
