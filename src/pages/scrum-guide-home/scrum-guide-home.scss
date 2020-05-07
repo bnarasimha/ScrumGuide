@@ -14,18 +14,18 @@ $width : inherit;
 }
 
 .scrum-topic{
-  background-color: #D9B48FFF !important;
+  background-color: #6D99E1 !important;
   padding: 5px; 
   cursor: pointer;
   line-height: 30px !important;
   font-size: 14px;
-  color: black;
+  color: white;
   font-weight: bold;
   border: solid 1px grey
 }
 
 .detail-panel-background{
-  background-color: #B3C7D6FF !important;
+  background-color: #CCE9F6;
   font-weight: bold;
   color: black;
 }
@@ -39,7 +39,7 @@ $width : inherit;
 
 .detail-topic-container{
   border: solid 1px #2460A7FF;
-  background-color: #B3C7D6FF;
+  background-color: white;
 }
 
 .back-button{
