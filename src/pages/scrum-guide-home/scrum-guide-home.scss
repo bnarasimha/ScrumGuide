@@ -27,7 +27,15 @@ $width : inherit;
 .detail-panel-background{
   background-color: #CCE9F6;
   font-weight: bold;
-  color: black;
+  color: #2F2F2F;
+  font-family: Arial, Helvetica, sans-serif
+}
+.detail-sub-header{
+  font-size: 17px;
+}
+
+.list{
+  padding-left: 15px;
 }
 
 .detail-header-background{
