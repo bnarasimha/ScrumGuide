@@ -14,19 +14,21 @@ export class Artifacts {
   artifacts: Array<{title: string, component : any}>
 
   constructor(private navCtrl : NavController) {
-
-    this.artifacts = [
-      { title : 'Poduct Backlog', component : ProductBacklog},
-      { title : 'Sprint Backlog', component : SprintBacklog},
-      { title : 'Increment', component : Increment}
-    ];
   }
 
   back(component:any){
     this.navCtrl.pop(component);
   }
 
-  goToPage(component: any) {
-    this.navCtrl.push(component);
+  goToProductBacklog() {
+    this.navCtrl.push(ProductBacklog);
+  }
+
+  goToSprintBacklog() {
+    this.navCtrl.push(SprintBacklog);
+  }
+
+  goToIncrement() {
+    this.navCtrl.push(Increment);
   }
 }

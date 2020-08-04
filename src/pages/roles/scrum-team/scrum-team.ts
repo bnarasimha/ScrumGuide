@@ -14,18 +14,21 @@ export class ScrumTeam {
   roles: Array<{title: string, component : any}>
 
   constructor(private navCtrl : NavController) {
-    this.roles = [
-      { title : 'Poduct Owner', component : ProductOwner},
-      { title : 'Scrum Master', component : ScrumMaster},
-      { title : 'Development Team', component : DevelopmentTeam}
-    ];
   }
 
   back(component:any){
     this.navCtrl.pop(component);
   }
 
-  goToPage(component: any) {
-    this.navCtrl.push(component);
+  goToProductOwner() {
+    this.navCtrl.push(ProductOwner);
+  }
+
+  goToScrumMaster() {
+    this.navCtrl.push(ScrumMaster);
+  }
+
+  goToDevTeam() {
+    this.navCtrl.push(DevelopmentTeam);
   }
 }

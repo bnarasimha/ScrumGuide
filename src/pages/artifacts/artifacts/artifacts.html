@@ -16,13 +16,27 @@
 
     <div class="space"></div>
 
-    <div class="detail-topic-container radius shadow mark">
+    <div class="detail-topic-container radius shadow">
 
-      <div class="row" *ngFor="let artifact of artifacts" >
+      <div class="row">
         <div class="col">
-            <div class="scrum-topic shadow radius" (click)="goToPage(artifact.component);">
-              {{artifact.title}}
+            <div class="scrum-topic shadow radius" (click)="goToProductBacklog();">
+              Product Backlog
             </div>
+        </div>
+        <div class="col">
+          <div class="scrum-topic shadow radius" (click)="goToSprintBacklog();">
+            Sprint Backlog
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="scrum-topic shadow radius" (click)="goToIncrement();">
+            Increment
+          </div>
+        </div>
+        <div class="col">
         </div>
       </div>   
 

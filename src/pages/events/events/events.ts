@@ -16,20 +16,29 @@ export class Events {
   events: Array<{title: string, component : any}>
 
   constructor(private navCtrl : NavController) {
-    this.events = [
-      { title : 'Sprint Planning', component : SprintPlanning},
-      { title : 'Daily Scrum', component : DailyScrum},
-      { title : 'Sprint Review', component : SprintReview},
-      { title : 'Sprint Retrospective', component : SprintRetrospective},
-      { title : 'Sprint', component : Sprint}
-    ];
   }
 
   back(component:any){
     this.navCtrl.pop(component);
   }
 
-  goToPage(component: any) {
-    this.navCtrl.push(component);
+  goToSprintPlanning() {
+    this.navCtrl.push(SprintPlanning);
+  }
+
+  goToDailyScrum() {
+    this.navCtrl.push(DailyScrum);
+  }
+
+  goSprintReview() {
+    this.navCtrl.push(SprintReview);
+  }
+
+  goToSprintRetrospective() {
+    this.navCtrl.push(SprintRetrospective);
+  }
+
+  goToSprint() {
+    this.navCtrl.push(Sprint);
   }
 }

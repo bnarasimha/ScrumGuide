@@ -16,13 +16,27 @@
   
     <div class="space"></div>
 
-    <div class="detail-topic-container radius shadow mark">
+    <div class="detail-topic-container radius shadow">
 
-      <div class="row" *ngFor="let role of roles" >
+      <div class="row">
         <div class="col">
-            <div class="scrum-topic shadow radius" (click)="goToPage(role.component);">
-              {{role.title}}
+            <div class="scrum-topic shadow radius" (click)="goToProductOwner();">
+              Poduct Owner
             </div>
+        </div>
+        <div class="col">
+          <div class="scrum-topic shadow radius" (click)="goToScrumMaster();">
+            Scrum Master
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="scrum-topic shadow radius" (click)="goToDevTeam();">
+            Development Team
+          </div>
+        </div>
+        <div class="col">
         </div>
       </div>   
 

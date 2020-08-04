@@ -16,15 +16,43 @@
 
     <div class="space"></div>
 
-    <div class="detail-topic-container radius shadow mark">
+    <div class="detail-topic-container radius shadow">
 
-      <div class="row" *ngFor="let event of events">
+      <div class="row">
         <div class="col">
-            <div class="scrum-topic shadow radius" (click)="goToPage(event.component);">
-              {{event.title}}
+            <div class="scrum-topic shadow radius" (click)="goToSprintPlanning();">
+              Sprint Planning
             </div>
         </div>
-      </div>   
+        <div class="col">
+          <div class="scrum-topic shadow radius" (click)="goToDailyScrum();">
+            Daily Scrum
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+            <div class="scrum-topic shadow radius" (click)="goSprintReview();">
+              Sprint Review
+            </div>
+        </div>
+        <div class="col">
+          <div class="scrum-topic shadow radius" (click)="goToSprintRetrospective();">
+            Sprint Retrospective
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+            <div class="scrum-topic shadow radius" (click)="goToSprint();">
+              Sprint
+            </div>
+        </div>
+        <div class="col">
+        </div>
+      </div>
 
     </div>
 
