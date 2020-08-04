@@ -1,6 +1,20 @@
 <ion-header>
-    <ion-title>
-        Scrum Guide
+    <ion-title style="width: 100%;">
+      <div class="row">
+        <div class="col">
+          Scrum Guide
+        </div>
+        <div class="col">
+          &nbsp;
+        </div>
+        <div class="col">
+          <a href="https://play.google.com/store/apps/details?id=scrum.guide">
+            <img style="text-align: right; margin-bottom: 2px;" src="../../assets/imgs/rate.jpg" width="25px" height="25px"> &nbsp;&nbsp;&nbsp;
+          </a>
+
+          <img (click)="shareApp()" style="text-align: right; margin-bottom: 3px;" src="../../assets/imgs/share.png" width="20px" height="20px">
+        </div>        
+      </div>
     </ion-title>
 </ion-header>
 
@@ -12,17 +26,18 @@
       <img class="radius shadow" style="border: solid 2px grey;" 
       width="250px" height="250px" src="../../assets/imgs/scrumguide.png" 
       (click)="goToScrumGuideHome();"/>
-    </div>
+    </div> 
 
-    <div class="space-big"></div>
+    <div class="space"></div>
 
-    <div style="text-align: center; font-weight: bold; font-size: large;">
-      Click above cover to read Scrum Guide
+    <div style="text-align: center; font-weight: bold; font-size:medium;">
+      Click above to read Scrum Guide.
     </div>
 
   </div>
 
   <div class="row-center" style="height: 10%">
+
     <div style="text-align: center;">
       This Scrum Guide is a direct port of the November 2017 version available 
       <a class="text-bold" href="https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100">as a PDF here.</a>

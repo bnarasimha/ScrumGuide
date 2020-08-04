@@ -9,6 +9,9 @@ import { DefinitionOfDone } from '../definition-of-done/definition-of-done';
 import { Slides } from 'ionic-angular';
 import { EndNote } from '../end-note/end-note';
 
+import { SocialSharing } from '@ionic-native/social-sharing'
+
+
 @Component({
   selector: 'page-hello-ionic',
   templateUrl: 'scrum-guide-home.html'
@@ -27,8 +30,18 @@ export class ScrumGuideHome {
     speed: 400
   };
 
-  constructor(private navCtrl : NavController) {
+  constructor(private navCtrl : NavController, private socialSharing: SocialSharing) {
   }
+
+  shareApp(){
+    var options ={
+      message: "Check out this app, Scrum Guide: ",
+      subject: "Scrum Guide Android App",
+      url: "https://play.google.com/store/apps/details?id=scrum.guide"
+    }
+    this.socialSharing.shareWithOptions(options).then((success) => {});
+  }
+
 
   goToScrum(){
     this.navCtrl.push(Scrum);
