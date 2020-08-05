@@ -4,7 +4,8 @@ $width : inherit;
 .topic-square{
   text-align: center;
   padding-top: 40px;
-  background-color: #6D99E1;
+  //background-color: #6D99E1;
+  background-color: #607D8B;
   cursor: pointer;
   height: $height;
   width: $width;
@@ -14,18 +15,19 @@ $width : inherit;
 }
 
 .scrum-topic{
-  background-color: #6D99E1 !important;
+  //background-color: #6D99E1 !important;
+  background-color: #B0BEC5 !important;
   padding: 5px; 
   cursor: pointer;
   line-height: 30px !important;
   font-size: 14px;
-  color: white;
+  color: black;
   font-weight: bold;
   border: solid 1px grey
 }
 
 .detail-panel-background{
-  background-color: #CCE9F6;
+  background-color: white;
   font-weight: bold;
   color: #2F2F2F;
   font-family: Arial, Helvetica, sans-serif;
@@ -40,10 +42,13 @@ $width : inherit;
 }
 
 .detail-header-background{
-  background-color: #2460A7FF !important;
+  background-color: #546E79 !important;
   padding: 5px;
   line-height: 30px;
   font-size: 18px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
 .detail-topic-container{
@@ -56,7 +61,8 @@ $width : inherit;
 }
 
 .back-button{
-  background-color: #2460A7FF !important;
+  //background-color: #2460A7FF !important;
+  background-color: #546E79;
   font-weight: bold;
   color: white;
   min-height: 30px;
