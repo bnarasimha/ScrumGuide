@@ -63,10 +63,10 @@ export class ScrumGuideHome {
 
   setModeImageSrc(){
     if(this.mode == "theme-light"){
-      this.appmodeimage = "../../assets/imgs/darkmode1.png";
+      this.appmodeimage = "../../assets/imgs/darkmode.png";
     }
     else{
-      this.appmodeimage = "../../assets/imgs/lightmode1.png";
+      this.appmodeimage = "../../assets/imgs/lightmode.png";
     }
   }
 
