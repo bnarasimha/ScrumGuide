@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ScrumGuideHome } from '../scrum-guide-home/scrum-guide-home' 
 import { SocialSharing } from '@ionic-native/social-sharing'
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'home',
@@ -9,7 +10,10 @@ import { SocialSharing } from '@ionic-native/social-sharing'
 })
 export class Home {
 
-  constructor(private navCtrl : NavController, private socialSharing: SocialSharing) {
+  public mode;
+  public appmodeimage;
+
+  constructor(private navCtrl : NavController, private socialSharing: SocialSharing, public storage: Storage) {
   }
 
   shareApp(){
@@ -23,5 +27,29 @@ export class Home {
 
   goToScrumGuideHome(){
     this.navCtrl.push(ScrumGuideHome);
+  }
+
+  ngOnInit(){
+    this.storage.get("mode").then((data) => {
+      if(data != undefined && data != ''){
+        this.mode = data;
+        this.setAppMode();
+      }
+      else{
+        this.mode = "theme-dark";
+        this.setAppMode();
+      }
+    })    
+  }
+
+  setAppMode(){
+    let body = document.getElementsByTagName('body')[0];
+
+    if(body.classList.contains("theme-light") || body.classList.contains("theme-dark")){
+      body.classList.toggle(this.mode);
+    }
+    else{
+      body.classList.add(this.mode);
+    }
   }
 }

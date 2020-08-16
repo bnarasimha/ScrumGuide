@@ -1,3 +1,124 @@
-.home {
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .theme-light {
+    --topic-square-background-color:#607D8B;
+    --topic-square-font-color:white;
+  
+    --maincontent-background-color:white;
+  
+    --detail-panel-background:white;
+    --detail-panel-font-color:black;
+    --detail-panel-background-font-weight: bold;
 
-}
+    --mainheader--font-color:black;
+  
+    --scrum-topic-font-color:black;
+    --scrum-topic-background-color:white;
+  
+    --regular-text:black;
+  }
+  .theme-dark {
+    --topic-square-background-color:#1C2A35;
+    --topic-square-font-color:white;
+  
+    --maincontent-background-color:black;
+    
+    --detail-panel-background:#212121;
+    --detail-panel-font-color:white;
+    --detail-panel-background-font-weight: semi bold;
+    
+    --mainheader-font-color:white;
+  
+    --scrum-topic-font-color:white;
+    --scrum-topic-background-color:#212121;
+  
+    --regular-text:white;
+  }
+   
+  .maincontent {
+    background-color: var(--maincontent-background-color) !important;
+  }
+  
+  .mainheader {
+    color: var(--mainheader-font-color) !important;
+  }
+  
+  .regulartext{
+    color: var(--regular-text);
+  }
+  
+  
+  $height : 100px;
+  $width : inherit;
+  
+  .topic-square{
+    text-align: center;
+    padding-top: 40px;
+    background: var(--topic-square-background-color);
+    cursor: pointer;
+    height: $height;
+    width: $width;
+    font-size: 17px;
+    color: var(--topic-square-font-color);
+    font-weight: bold;
+  }
+  
+  .scrum-topic{
+    background-color: var(--scrum-topic-background-color) !important;
+    padding: 5px; 
+    cursor: pointer;
+    line-height: 30px !important;
+    font-size: 14px;
+    color: var(--scrum-topic-font-color);
+    font-weight: bold;
+    border: solid 1px grey
+  }
+  
+  .detail-panel-background{
+    background-color:var(--detail-panel-background) !important;
+    font-weight: var(--detail-panel-background-font-weight);
+    color: var(--detail-panel-font-color) !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+  .detail-sub-header{
+    font-size: 17px;
+  }
+  
+  .list{
+    padding-left: 15px;
+  }
+  
+  .detail-header-background{
+    background-color: #546E79 !important;
+    padding: 5px;
+    line-height: 30px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .detail-topic-container{
+    background-color: var(--detail-panel-background);
+  }
+  
+  .detail-main-container{
+    border: solid 1px black;
+  }
+  
+  .back-button{
+    background-color: #546E79;
+    font-weight: bold;
+    color: white;
+    min-height: 30px;
+    width: 80px;
+    display: block;
+    line-height: 30px;
+  }
+  
+  

@@ -1,31 +1,33 @@
 <ion-header>
-  <ion-title style="width: 100%;">
+  <ion-title class="container" style="width: 100%;">
     <div class="row">
-      <div class="col">
+      <div class="col mainheader">
         Scrum Guide
       </div>
       <div class="col">
         &nbsp;
       </div>
       <div class="col">
+        <img (click)="changeMode(mode)" alt="Dark Mode" style="text-align: right; margin-bottom: 3px;" src="{{appmodeimage}}" width="23px" height="23px">
+        &nbsp;
         <a href="https://play.google.com/store/apps/details?id=scrum.guide">
-          <img style="text-align: right; margin-bottom: 2px;" src="../../assets/imgs/rate.jpg" width="25px" height="25px"> &nbsp;&nbsp;&nbsp;
+          <img style="text-align: right; margin-bottom: 3px;" src="../../assets/imgs/rate.webp" width="23px" height="23px"> 
         </a>
-
-        <img (click)="shareApp()" style="text-align: right; margin-bottom: 3px;" src="../../assets/imgs/share.png" width="20px" height="20px">
+        &nbsp;
+        <img (click)="shareApp()" style="text-align: right; margin-bottom: 3px;" src="../../assets/imgs/share.webp" width="23px" height="23px">
       </div>        
     </div>
   </ion-title>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="maincontent">
 
   <div class="row-center">
     <a href="https://scrumorg-website-prod.s3.amazonaws.com/drupal/inline-images/2017-05/ScrumFrameworkTest.png">
       <img src="../../assets/imgs/ScrumFramework.png" alt="Open image in browser"/>
     </a>
 
-    <span style="font-weight: bold; padding-left: 5px;">
+    <span style="font-weight: bold; padding-left: 5px;" class="regulartext">
     Click above image to open in browser
     </span>
   </div>

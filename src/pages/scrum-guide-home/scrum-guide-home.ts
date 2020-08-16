@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 import { Scrum } from '../scrum/scrum/scrum';
 import { ScrumTeam } from '../roles/scrum-team/scrum-team';
@@ -16,7 +17,57 @@ import { SocialSharing } from '@ionic-native/social-sharing'
 })
 export class ScrumGuideHome {
 
-  constructor(private navCtrl : NavController, private socialSharing: SocialSharing) {
+  public mode;
+  public appmodeimage;
+
+  constructor(private navCtrl : NavController, private socialSharing: SocialSharing, public storage: Storage) {
+  }
+
+  ngOnInit(){
+    this.storage.get("mode").then((data) => {
+      if(data != undefined && data != ''){
+        this.mode = data;
+        this.setModeImageSrc();    
+      }
+      else{
+        this.mode = "theme-dark";
+        this.setModeImageSrc();    
+      }
+    })    
+  }
+
+  changeMode(){
+    if(this.mode == "theme-light"){
+      this.mode = "theme-dark";
+    }
+    else{
+      this.mode = "theme-light";
+    }
+
+    this.setAppMode();
+    this.setModeImageSrc();
+    this.storage.set("mode", this.mode);
+  }
+
+  setAppMode(){
+    let body = document.getElementsByTagName('body')[0];
+
+    if(body.classList.contains("theme-light")){
+      body.classList.remove("theme-light");
+    }
+    if(body.classList.contains("theme-dark")){
+      body.classList.remove("theme-dark");
+    }
+    body.classList.add(this.mode);
+  }
+
+  setModeImageSrc(){
+    if(this.mode == "theme-light"){
+      this.appmodeimage = "../../assets/imgs/darkmode1.png";
+    }
+    else{
+      this.appmodeimage = "../../assets/imgs/lightmode1.png";
+    }
   }
 
   shareApp(){
