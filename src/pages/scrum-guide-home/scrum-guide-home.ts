@@ -6,10 +6,10 @@ import { Scrum } from '../scrum/scrum/scrum';
 import { ScrumTeam } from '../roles/scrum-team/scrum-team';
 import { Artifacts } from '../artifacts/artifacts/artifacts';
 import { Events } from '../events/events/events';
-import { DefinitionOfDone } from '../definition-of-done/definition-of-done';
 import { EndNote } from '../end-note/end-note';
 
 import { SocialSharing } from '@ionic-native/social-sharing'
+import { ScrumValues } from '../scrum/scrum-values/scrum-values';
 
 @Component({
   selector: 'page-hello-ionic',
@@ -91,8 +91,8 @@ export class ScrumGuideHome {
     this.navCtrl.push(Artifacts);
   }
 
-  goToDoD(){
-    this.navCtrl.push(DefinitionOfDone);
+  goToScrumValues(){
+    this.navCtrl.push(ScrumValues);
   }
 
   goToEndNote(){

@@ -1,5 +1,5 @@
 {
-  "name": "ScrumGuide",
+  "name": "scrumguide",
   "version": "1.2.0",
   "author": "Narasimha Badrinath",
   "homepage": "http://ionicframework.com/",
@@ -24,7 +24,8 @@
     "@ionic-native/splash-screen": "4.20.0",
     "@ionic-native/status-bar": "4.20.0",
     "@ionic/storage": "2.2.0",
-    "cordova-android": "8.1.0",
+    "compare-func": "^2.0.0",
+    "cordova-android": "^9.0.0",
     "cordova-ios": "5.1.1",
     "cordova-plugin-x-socialsharing": "^5.6.8",
     "es6-promise-plugin": "^4.2.2",
@@ -35,7 +36,7 @@
     "zone.js": "0.8.29"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "3.2.4",
+    "@ionic/app-scripts": "^3.2.4",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-ionic-webview": "^4.1.3",

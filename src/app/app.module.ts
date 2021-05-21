@@ -32,7 +32,7 @@ import { SprintRetrospective } from '../pages/events/sprint-retrospective/sprint
 import { SprintReview } from '../pages/events/sprint-review/sprint-review';
 import { Events } from '../pages/events/events/events';
 
-import { DefinitionOfDone } from '../pages/definition-of-done/definition-of-done';
+// import { DefinitionOfDone } from '../pages/definition-of-done/definition-of-done';
 import { EndNote } from '../pages/end-note/end-note';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -63,7 +63,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     SprintReview,
     SprintRetrospective,
     Events,
-    DefinitionOfDone,
+    // DefinitionOfDone,
     ScrumTeam,
     EndNote
   ],
@@ -96,7 +96,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     SprintReview,
     SprintRetrospective,
     Events,
-    DefinitionOfDone,
+    // DefinitionOfDone,
     ScrumTeam,
     EndNote
   ],
